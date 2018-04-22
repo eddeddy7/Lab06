@@ -7,9 +7,13 @@ import java.sql.SQLException;
 
 public class DBConnect {
 
-	static private final String jdbcUrl = "jdbc:mysql://localhost/meteo?user=root&password=root";
+	
+	static private final String jdbcUrl = "jdbc:mysql://localhost/meteo?user=root&password=Martyannaraffa7";
+	
+	
 	static private DBConnect instance = null;
 
+	
 	private DBConnect() {
 		instance = this;
 	}
@@ -29,6 +33,7 @@ public class DBConnect {
 			return conn;
 
 		} catch (SQLException e) {
+			//System.out.println("erroreeeeeeeeeeeeeeeeeeeee");
 			e.printStackTrace();
 			throw new RuntimeException("Cannot get connection " + jdbcUrl, e);
 		}

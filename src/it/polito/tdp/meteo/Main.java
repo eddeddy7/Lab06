@@ -12,11 +12,14 @@ public class Main extends Application {
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("Meteo.fxml"));
 			BorderPane root = (BorderPane) loader.load();
+			MeteoController controller=loader.getController();
+			Model m=new Model();
+			controller.setModel(m);
 
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 
-			MeteoController controller = loader.getController();
+		
 			// TODO impostare il model nel controller
 
 			primaryStage.setScene(scene);

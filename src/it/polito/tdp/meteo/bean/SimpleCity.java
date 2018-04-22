@@ -57,7 +57,7 @@ public class SimpleCity {
 
 	@Override
 	public String toString() {
-		return nome;
+		return nome + " "+ costo+"\n";
 	}
 	
 }
